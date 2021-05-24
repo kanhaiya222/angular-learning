@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="tab-block">
+            <ul class="nav nav-tabs">
+                <li (click)="tabSelect(1)" class="nav-item"><a [ngClass]="{'active':tabItem == 1}" class="nav-link active" data-toggle="tab">Menu 1</a></li>
+                <li (click)="tabSelect(2)" class="nav-item"><a [ngClass]="{'active':tabItem == 2}" class="nav-link" data-toggle="tab">Menu 2</a></li>
+                <li (click)="tabSelect(3)" class="nav-item"><a [ngClass]="{'active':tabItem == 3}" class="nav-link" data-toggle="tab">Menu 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div [ngClass]="{'active show':tabItem == 1}" *ngIf="tabItem == 1" class="tab-pane fade show active">
+                  <h3>Menu 1</h3>
+                  <p>Menu 1 Content</p>
+                </div>
+                <div [ngClass]="{'active show':tabItem == 2}" *ngIf="tabItem == 2" class="tab-pane fade">
+                  <h3>Menu 2</h3>
+                  <p>Menu 2 content</p>
+                </div>
+                <div [ngClass]="{'active show':tabItem == 3}" *ngIf="tabItem == 3" class="tab-pane fade">
+                  <h3>Menu 3</h3>
+                  <p>Menu 3 Content</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
